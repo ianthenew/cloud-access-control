@@ -3,117 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>雲端門禁社區管理辦法</title>
+    <title>🔥震撼！社區大升級！雲端門禁管理辦法懶人包</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #ff3b30;
+            --secondary-color: #007aff;
+            --dark-color: #1c1c1e;
+            --bg-color: #f2f2f7;
+            --highlight: #ffcc00;
+        }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Microsoft JhengHei';
+            font-family: 'Noto Sans TC', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--dark-color);
             line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
+        }
+        .hero {
+            background: linear-gradient(135deg, #1c1c1e 0%, #2c3e50 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero h1 {
+            font-size: 2.8em;
+            font-weight: 900;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .hero p {
+            font-size: 1.2em;
+            color: #f39c12;
+            font-weight: 700;
+        }
+        .hero .badge {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 1.2em;
+            display: inline-block;
+            margin-bottom: 15px;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
         .container {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: -30px auto 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 40px;
+            position: relative;
+            z-index: 10;
         }
-        h1 {
-            text-align: center;
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
+        img.hero-img {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            object-fit: cover;
+            max-height: 400px;
         }
         h2 {
-            color: #2980b9;
-            margin-top: 25px;
-            font-size: 1.2em;
+            color: var(--secondary-color);
+            font-size: 1.8em;
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 15px;
+            margin-top: 40px;
+        }
+        .highlight-box {
+            background-color: #fffbcce6;
+            border: 2px dashed #f39c12;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .highlight-text {
+            background-color: var(--highlight);
+            padding: 0 5px;
+            color: var(--dark-color);
         }
         ul, ol {
-            margin-bottom: 15px;
+            font-size: 1.1em;
+            margin-bottom: 20px;
         }
         li {
-            margin-bottom: 8px;
+            margin-bottom: 15px;
+            padding-left: 10px;
         }
-        .highlight {
+        .rule-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 5px solid var(--primary-color);
+        }
+        .rule-card h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+        .cta-section {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px;
+            background: linear-gradient(135deg, #007aff 0%, #00c6ff 100%);
+            border-radius: 12px;
+            color: white;
+        }
+        .cta-btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            font-size: 1.5em;
             font-weight: bold;
-            color: #e74c3c;
+            text-decoration: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            margin-top: 20px;
+            box-shadow: 0 5px 15px rgba(255, 59, 48, 0.4);
+            transition: transform 0.2s;
+        }
+        .cta-btn:hover {
+            transform: translateY(-3px);
         }
         .footer {
-            margin-top: 40px;
             text-align: center;
+            margin-top: 40px;
+            color: #8e8e93;
             font-size: 0.9em;
-            color: #7f8c8d;
-            border-top: 1px solid #eee;
-            padding-top: 20px;
+        }
+        
+        /* Mobile optimization */
+        @media (max-width: 600px) {
+            .container { padding: 20px; margin-top: -10px; }
+            .hero h1 { font-size: 2em; }
         }
     </style>
 </head>
 <body>
+
+    <div class="hero">
+        <div class="badge">🚨 社區重大公告 🚨</div>
+        <h1>丟掉你的舊鑰匙！<br>社區全面升級「雲端門禁系統」</h1>
+        <p>不再擔心忘記帶卡、不再被訪客按電鈴吵醒！一部手機搞定所有進出！</p>
+    </div>
+
     <div class="container">
-        <h1>雲端門禁社區管理辦法</h1>
+        <!-- Placeholder image until generation works -->
+        <img src="https://images.unsplash.com/photo-1558002038-1055907df827?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="高科技雲端門禁" class="hero-img">
 
-        <h2>第一條：目的</h2>
-        <p>為提升本社區安全層級、便利住戶進出，並有效管理人員進出動線，特引進雲端門禁系統，並制定本管理辦法（以下簡稱本辦法）。</p>
+        <div class="highlight-box">
+            🔥 <strong>你還在用傳統感應卡嗎？</strong><br>
+            為了提升全體住戶的居住品質與<span class="highlight-text">安全防護層級</span>，我們正式導入最先進的雲端門禁系統！從今天起，你的手機就是最強大的通行證！
+        </div>
 
-        <h2>第二條：適用對象</h2>
-        <p>本辦法適用於本社區全體區分所有權人、住戶、承租戶、經常性訪客及物業管理人員。</p>
-
-        <h2>第三條：系統說明</h2>
-        <p>本社區採用先進之雲端門禁系統，支援以下進出方式：</p>
+        <h2>📌 為什麼要換？超強 4 大亮點一次看！</h2>
         <ul>
-            <li>智慧型手機 APP (藍牙/NFC/遠端開門)</li>
-            <li>動態 QR Code 掃描</li>
-            <li>加密感應磁扣/卡片</li>
-            <li>生物辨識（如人臉辨識，需住戶同意建檔）</li>
+            <li>📱 <strong>手機就是鑰匙：</strong> 支援藍牙、NFC 甚至遠端開門，回家就像 VIP！</li>
+            <li>🚀 <strong>訪客一秒放行：</strong> 親友來訪？送出「限時 QR Code」，他們自己掃碼進來，免下樓帶人！</li>
+            <li>🛡️ <strong>軍規級資安防護：</strong> 進出紀錄雲端加密，小偷無所遁形，安全感 MAX！</li>
+            <li>💳 <strong>告別沉甸甸的鑰匙串：</strong> 出門運動、買菜，帶一支手機就夠！</li>
         </ul>
 
-        <h2>第四條：權限申請與發放</h2>
-        <ol>
-            <li><strong>區分所有權人：</strong>憑身分證明文件及建物所有權狀影本向管理中心申請開通 APP 帳號。</li>
-            <li><strong>承租戶：</strong>需提供有效期限內之房屋租賃契約書，並經區分所有權人(房東)簽署同意書後方可申請。</li>
-            <li><strong>帳號綁定：</strong>為確保資訊安全，每組雲端帳號僅限綁定於申請人本人的手機，<span class="highlight">嚴禁將帳號密碼或手機出借予他人使用。</span></li>
-            <li><strong>數量限制：</strong>每戶依坪數或房型設有免費授權帳號上限，超出部分需繳交系統維護費。</li>
-        </ol>
+        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="手機 QR Code 掃描進出" class="hero-img">
 
-        <h2>第五條：訪客與施工人員管理</h2>
-        <ol>
-            <li><strong>訪客通行：</strong>住戶可透過專屬 APP 發送具有時效性（如 24 小時內單次有效）的訪客 QR Code 或一次性密碼，供訪客自行掃描進出。</li>
-            <li><strong>裝修施工：</strong>裝潢施工人員需由住戶向管理中心統一申請「臨時施工權限」，設定允許進出的日期與時段（如平日 08:00-18:00），逾時自動失效。</li>
-        </ol>
+        <h2>📜 必看！雲端門禁管理辦法重點懶人包</h2>
+        
+        <div class="rule-card">
+            <h3>⚠️ 01. 權限申請：嚴禁外借！</h3>
+            <p><strong>區分所有權人：</strong>請帶身分證與權狀影本至管理中心開通 APP。<br>
+            <strong>承租戶：</strong>需附上租賃契約與房東同意書。<br>
+            <span class="highlight-text">注意：一組帳號綁定一支手機，絕對不可以把帳號密碼借給非住戶！</span>抓到違規，管委會有權直接停權！</p>
+        </div>
 
-        <h2>第六條：資料隱私與資訊安全</h2>
-        <ol>
-            <li>系統所收集之個人資料及進出紀錄，僅供社區安全維護、警民連線防盜及緊急災害應變使用。</li>
-            <li>管理委員會及物業公司應嚴格遵守《個人資料保護法》，非經當事人同意或檢警機關依法調閱，不得外洩進出紀錄。</li>
-        </ol>
+        <div class="rule-card">
+            <h3>👷 02. 裝修與施工人員怎麼辦？</h3>
+            <p>家裡要裝潢？很簡單！住戶可向管理中心申請「臨時施工權限」，設定允許進出的時段（例如平日 08:00 - 18:00）。時間一到，權限<span class="highlight-text">自動銷毀</span>，再也不怕施工人員週末偷跑進來！</p>
+        </div>
 
-        <h2>第七條：設備維護與損壞賠償</h2>
-        <ol>
-            <li>各公共區域之門禁讀卡機、閘門及網路設備屬社區共有財產，請全體住戶共同愛惜維護。</li>
-            <li>若因人為蓄意破壞或不當使用導致設備損壞，經調閱監視器查證屬實者，須負擔全額修繕賠償責任。</li>
-        </ol>
+        <div class="rule-card">
+            <h3>🔒 03. 隱私與設備保護</h3>
+            <p>所有的進出紀錄都會受到《個資法》嚴格保護，僅作為社區安全防盜使用。<br>另外，感應設備很貴的！如果經監視器發現有<span class="highlight-text">蓄意破壞</span>行為，必須負擔全額賠償喔！</p>
+        </div>
 
-        <h2>第八條：違規處理與權限暫停</h2>
-        <p>如有下列情事之一者，管理委員會有權暫停或註銷其雲端門禁權限，改以人工查驗身分方式進出：</p>
-        <ul>
-            <li>私自將 APP 帳號出借、轉讓予非社區住戶者。</li>
-            <li>利用訪客 QR Code 掩護推銷員、不明人士進入社區者。</li>
-            <li>欠繳社區管理費達規定催繳期限，經公告並依法寄發存證信函仍未繳納者（依規約辦理）。</li>
-            <li>經查證有破壞社區安全行為或違反法令者。</li>
-        </ul>
+        <div class="rule-card" style="border-left-color: #ffcc00;">
+            <h3>💰 04. 欠繳管理費的殺手鐧！</h3>
+            <p>若欠繳社區管理費達規定催繳期限，且依法寄發存證信函仍不理會者，管委會將<span class="highlight-text">直接暫停雲端門禁權限</span>。被停權的住戶只能改用人工查驗身分（或傳統登記）進出社區。請大家記得按時繳費喔！</p>
+        </div>
 
-        <h2>第九條：附則</h2>
-        <ol>
-            <li>本辦法未盡事宜，依本社區規約及相關法令規定辦理。</li>
-            <li>本辦法經管理委員會草擬，提報區分所有權人會議決議通過後公告實施，修正時亦同。</li>
-        </ol>
+        <div class="cta-section">
+            <h2 style="color: white; border: none; margin-top: 0;">準備好體驗未來的居住方式了嗎？</h2>
+            <p>趕快準備好相關文件，前往管理中心開通您的專屬雲端帳號！</p>
+            <a href="#" class="cta-btn">👉 點我下載申請書</a>
+        </div>
 
         <div class="footer">
-            <p>制定單位：家鼎建設 雲端門禁專案小組 | 版本：V1.0 | 制定日期：2026年9月</p>
+            <p>家鼎建設 雲端門禁專案小組 敬上 | V2.0 爆款行銷版</p>
         </div>
     </div>
+
 </body>
 </html>
